@@ -34,4 +34,15 @@ There are many improvements planned on building "BONANZA" as a full fledged webs
 
 ## Images of the prototype
 
-![]()
+Here are the images of the prototype Bonanza draft 1:
+
+Prototype:
+
+![Image of the prototype](images/Screenshot%202025-09-15%20164818.png)
+
+Healthy image selection:
+
+![Healthy image selection](images/Screenshot%202025-09-15%20165102.png)
+
+Healthy image prediction:
+![Healthy image prediction](images/Screenshot%202025-09-15%20165444.png)
