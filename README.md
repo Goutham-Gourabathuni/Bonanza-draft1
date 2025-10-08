@@ -34,7 +34,7 @@ There are many improvements planned on building "BONANZA" as a full fledged webs
 
 ## Images of the prototype
 
-Here are the images of the prototype Bonanza draft 1:
+Here are the images of the prototype Bonanza draft 1:-
 
 Prototype:
 
@@ -45,4 +45,37 @@ Healthy image selection:
 ![Healthy image selection](images/Screenshot%202025-09-15%20165102.png)
 
 Healthy image prediction:
+
 ![Healthy image prediction](images/Screenshot%202025-09-15%20165444.png)
+
+Boron deficiency leaf selection
+
+![Boron deficiency leaf selection](images/Screenshot%202025-09-15%20165527.png)
+
+Boron deficiency leaf prediction
+
+![Boron deficiency leaf prediction](images/Screenshot%202025-09-15%20165538.png)
+
+Calcium deficiency leaf selection
+
+![Calcium deficiency leaf selection](images/Screenshot%202025-09-15%20171658.png)
+
+Calcium deficiency leaf prediction
+
+![Calcium deficiency leaf prediction](images/Screenshot%202025-09-15%20171715.png)
+
+Iron deficiency leaf selection
+
+![Iron deficiency leaf selection](images/Screenshot%202025-09-15%20171833.png)
+
+Iron deficiency leaf prediction
+
+![Iron deficiency leaf prediction](images/Screenshot%202025-09-15%20171848.png)
+
+Potassium deficiency leaf selection
+
+![Potassium deficiency leaf selection](images/Screenshot%202025-09-15%20171916.png)
+
+Potassium deficiency leaf prediction
+
+![Potassium deficiency leaf prediction](images/Screenshot%202025-09-15%20171931.png)
