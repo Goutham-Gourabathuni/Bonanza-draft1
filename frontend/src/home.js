@@ -152,12 +152,10 @@ export const ImageUpload = () => {
       try {
         let formData = new FormData();
         formData.append("file", selectedFile);
-        console.log("Sending request to:", process.env.REACT_APP_API_URL);
         let res = await axios.post(process.env.REACT_APP_API_URL, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
-        console.log("API Response:", res.data);
         if (res.status === 200) {
           setData(res.data);
         }
@@ -219,8 +217,6 @@ export const ImageUpload = () => {
 
   const confidence = data ? (parseFloat(data.confidence) * 100).toFixed(2) : 0;
   
-  // Debug logging
-  console.log("Current state:", { data, image, isLoading, confidence });
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -335,7 +331,7 @@ export const ImageUpload = () => {
                         <StyledTableBody>
                           <StyledTableRow>
                             <StyledTableCell component="th" scope="row">
-                              {data.class}
+                              {data.class || 'No class'}
                             </StyledTableCell>
                             <StyledTableCell align="right">
                               {confidence}%
