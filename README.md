@@ -27,10 +27,8 @@ There are many improvements planned on building "BONANZA" as a full fledged webs
 ## How to Run
 1. Clone the repo
 2. Install dependencies (if Node.js: `npm install`)
-3. split the terminal in two
-4. In terminal 1, from the path "BananaWebsite\api>" run "uvicorn main:app --reload"
-5. In terminal 2, from the path "BananaWebsite\frontend>" run "npm start"
-6. Then the website starts working
+3. In terminal, run the command "npm run dev"
+4. Then the website starts working
 
 ## Images of the prototype
 
