@@ -52,3 +52,18 @@ Thumbs.db
 *.log
 logs/
 output/
+
+# Python
+api/venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build files
+frontend/build/
+
+# Environment variables
+.env
