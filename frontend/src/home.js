@@ -137,7 +137,7 @@ export const ImageUpload = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isSmallMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  
+
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
   const [data, setData] = useState();
@@ -151,10 +151,10 @@ export const ImageUpload = () => {
       try {
         let formData = new FormData();
         formData.append("file", selectedFile);
-        let apiUrl = process.env.NODE_ENV === 'development' 
-            ? "http://localhost:8000/api/predict" 
-            : "/api/predict";
-            
+        let apiUrl = process.env.NODE_ENV === 'development'
+          ? "http://localhost:8000/api/predict"
+          : "https://bonanza-draft1.onrender.com/api/predict";
+
         let res = await axios.post(apiUrl, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
@@ -206,7 +206,7 @@ export const ImageUpload = () => {
     }
     const objectUrl = URL.createObjectURL(selectedFile);
     setPreview(objectUrl);
-    
+
     // Cleanup function to revoke the object URL
     return () => URL.revokeObjectURL(objectUrl);
   }, [selectedFile]);
@@ -219,15 +219,15 @@ export const ImageUpload = () => {
   }, [preview, sendFile]);
 
   const confidence = data ? (parseFloat(data.confidence) * 100).toFixed(2) : 0;
-  
+
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <StyledAppBar position="static">
         <Toolbar>
-          <Typography 
-            variant={isMobile ? "subtitle1" : "h6"} 
-            component="div" 
+          <Typography
+            variant={isMobile ? "subtitle1" : "h6"}
+            component="div"
             sx={{ flexGrow: 1 }}
             noWrap
           >
@@ -236,9 +236,9 @@ export const ImageUpload = () => {
           <Avatar src={cblogo} alt="Logo" />
         </Toolbar>
       </StyledAppBar>
-      
-      <Container 
-        maxWidth={false} 
+
+      <Container
+        maxWidth={false}
         sx={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundRepeat: 'no-repeat',
@@ -265,35 +265,35 @@ export const ImageUpload = () => {
             {!image ? (
               <StyledCardEmpty>
                 <CardContent sx={{ padding: 0 }}>
-                  <DropzoneContainer 
+                  <DropzoneContainer
                     {...getRootProps()}
                     className={isDragAccept ? 'allowing' : ''}
                   >
                     <input {...getInputProps()} />
-                    <CloudUploadIcon 
-                      sx={{ 
-                        fontSize: isMobile ? 48 : 64, 
-                        color: 'white', 
-                        mb: 2 
-                      }} 
+                    <CloudUploadIcon
+                      sx={{
+                        fontSize: isMobile ? 48 : 64,
+                        color: 'white',
+                        mb: 2
+                      }}
                     />
-                    <Typography 
-                      variant={isMobile ? "body1" : "h6"} 
-                      sx={{ 
-                        color: 'white', 
+                    <Typography
+                      variant={isMobile ? "body1" : "h6"}
+                      sx={{
+                        color: 'white',
                         textAlign: 'center',
                         fontWeight: 'bold'
                       }}
                     >
-                      {isDragActive 
-                        ? 'Drop the image here' 
+                      {isDragActive
+                        ? 'Drop the image here'
                         : 'Drag and drop a banana leaf image here, or click to select'
                       }
                     </Typography>
-                    <Typography 
-                      variant="caption" 
-                      sx={{ 
-                        color: 'rgba(255,255,255,0.7)', 
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'rgba(255,255,255,0.7)',
                         textAlign: 'center',
                         mt: 1,
                         display: 'block'
@@ -314,11 +314,11 @@ export const ImageUpload = () => {
                     alt="Uploaded banana leaf"
                   />
                 </CardActionArea>
-                
+
                 {data && (
-                  <CardContent sx={{ 
-                    backgroundColor: 'white', 
-                    display: 'flex', 
+                  <CardContent sx={{
+                    backgroundColor: 'white',
+                    display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     p: 2
@@ -345,20 +345,20 @@ export const ImageUpload = () => {
                     </StyledTableContainer>
                   </CardContent>
                 )}
-                
+
                 {isLoading && (
-                  <CardContent sx={{ 
-                    backgroundColor: 'white', 
-                    display: 'flex', 
+                  <CardContent sx={{
+                    backgroundColor: 'white',
+                    display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     p: 3
                   }}>
                     <StyledCircularProgress size={40} />
-                    <Typography 
-                      variant="h6" 
-                      sx={{ 
-                        mt: 2, 
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        mt: 2,
                         color: '#000000a6',
                         fontWeight: 'bold'
                       }}
@@ -370,13 +370,13 @@ export const ImageUpload = () => {
               </StyledCard>
             )}
           </Grid>
-          
+
           {data && (
             <Grid item xs={12} sx={{ maxWidth: '416px', width: '100%' }}>
-              <StyledButton 
-                variant="contained" 
-                size="large" 
-                onClick={clearData} 
+              <StyledButton
+                variant="contained"
+                size="large"
+                onClick={clearData}
                 startIcon={<ClearIcon />}
                 sx={{ mt: 2 }}
               >
