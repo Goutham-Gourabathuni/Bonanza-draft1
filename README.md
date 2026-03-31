@@ -228,3 +228,12 @@ Provide fertilizer recommendations
 Real-time camera based detection
 Multi-crop deficiency detection
 Farmer friendly UI with multilingual support
+
+---
+
+## Deployed Website link
+
+---
+https://bonanza-draft1.vercel.app/
+
+---
