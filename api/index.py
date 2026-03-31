@@ -11,6 +11,14 @@ import os
 
 app = FastAPI()
 
+@app.get("/")
+async def health():
+    return {
+        "status": "healthy",
+        "service": "Bonanza Banana Leaf Nutrient Deficiency Detector API",
+        "message": "Backend is running successfully"
+    }
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
