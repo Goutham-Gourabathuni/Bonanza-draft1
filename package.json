@@ -1,16 +1,13 @@
 {
   "name": "bananawebsite",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start-frontend": "cd frontend && npm start",
-    "start-backend": "cd api && python main.py",
-    "dev": "concurrently \"npm run start-frontend\" \"npm run start-backend\""
+    "start-backend": "cd api && uvicorn index:app --port 8000",
+    "dev": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
+    "build": "cd frontend && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "concurrently": "^9.2.1"
   }

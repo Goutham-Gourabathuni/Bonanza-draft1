@@ -32,7 +32,6 @@ import cblogo from "./cblogo.PNG";
 import backgroundImage from "./bg.png";
 import axios from "axios";
 
-
 // Styled components using MUI v5 styled API
 const StyledButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(theme.palette.common.white),
@@ -152,7 +151,11 @@ export const ImageUpload = () => {
       try {
         let formData = new FormData();
         formData.append("file", selectedFile);
-        let res = await axios.post(process.env.REACT_APP_API_URL, formData, {
+        let apiUrl = process.env.NODE_ENV === 'development' 
+            ? "http://localhost:8000/api/predict" 
+            : "/api/predict";
+            
+        let res = await axios.post(apiUrl, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 

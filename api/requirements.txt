@@ -1,8 +1,6 @@
-tensorflow==2.12.0
-# tensorflow-serving-api removed (it conflicts badly)
 fastapi
 uvicorn
 python-multipart
 pillow
-matplotlib
 numpy
+tflite-runtime
