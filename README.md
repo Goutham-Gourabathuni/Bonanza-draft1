@@ -48,6 +48,8 @@ The model currently detects the following classes:
 
 # 🏗️ Project Architecture
 
+```
+
 User Upload Image
 │
 ▼
@@ -62,6 +64,7 @@ TensorFlow Lite Model
 ▼
 Prediction Result
 
+```
 
 ---
 
@@ -93,6 +96,8 @@ Prediction Result
 
 # 📂 Project Structure
 
+```
+
 BananaWebsite
 │
 ├── api
@@ -120,6 +125,8 @@ BananaWebsite
 ├── README.md
 ├── vercel.json
 └── package.json
+
+```
 
 ---
 
