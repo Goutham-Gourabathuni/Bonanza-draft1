@@ -1,34 +1,164 @@
+# 🍌 Bonanza – Banana Leaf Nutrient Deficiency Detector
 
-## Bonanza (draft 1) - A nutrient deficiency detection website of Banana leaves
+A **Computer Vision powered web application** that detects **nutrient deficiencies in banana leaves** from uploaded images.
 
->This project is a Draft version (prototype) of my main project "BONANZA" which will become a proper, fully functioning website in the mainstream of the internet.
+This project uses **deep learning and image classification** to analyze banana leaf images and identify nutrient deficiencies such as **Boron, Calcium, Iron, Potassium**, or determine if the leaf is **Healthy**.
 
-## Description
+The goal of this project is to assist **farmers, agricultural researchers, and agritech developers** in quickly identifying plant nutrient issues using **AI-based visual analysis**, enabling faster and more accurate agricultural decision-making.
 
-This is a draft project (more like a prototype), although it has issues in the code and functioning, it currently works and fulfills upto some extent.
+---
 
-This will straight up open the path-forward for the main website "BONANZA" which is on progress for the future.
-Which will have fully functioning features of a live website with amazing User Interface and easy to understand
-visual impressions for an average educated human being.
+# 🌱 Project Overview
 
-There are many improvements planned on building "BONANZA" as a full fledged website as well as app using technologies such as REACT NATIVE, etc (after the proper execution of the website).
+Banana plants often show **visible symptoms on leaves when nutrients are deficient**. Traditionally, identifying these deficiencies requires **expert knowledge or laboratory testing**.
 
-## Current Features
+This project provides a **simple AI-powered interface** where users can:
 
-- Drag the banana leaf image and drop it in the dropbox, or select the banana leaf image from the pc
-- The result is processed and given with the deficiency name and it's confidence score.
+1. Upload an image of a banana leaf
+2. The AI model analyzes the image
+3. The system predicts the **nutrient deficiency type**
+4. The result is displayed with a **confidence score**
 
-## To Do
+The project acts as a **prototype for the larger BONANZA agritech platform**, which aims to become a **complete intelligent crop monitoring system** in the future.
 
-- Refactor code for better readability
-- Update the code time to time according to the new versions of the languages
-  used to build this.
+---
 
-## How to Run
-1. Clone the repo
-2. Install dependencies (if Node.js: `npm install`)
-3. In terminal, run the command "npm run dev"
-4. Then the website starts working
+# 🚀 Features
+
+- Upload banana leaf images through a **drag-and-drop interface**
+- Detect nutrient deficiencies using **deep learning**
+- Display prediction results with **confidence score**
+- Simple and interactive **web interface**
+- Fast prediction using **TensorFlow Lite model**
+- Prototype system for future **AI-driven agriculture platforms**
+
+---
+
+# 🧠 Deficiency Classes Detected
+
+The model currently detects the following classes:
+
+- Healthy Leaf
+- Boron Deficiency
+- Calcium Deficiency
+- Iron Deficiency
+- Potassium Deficiency
+
+---
+
+# 🏗️ Project Architecture
+
+User Upload Image
+│
+▼
+Frontend (React Web App)
+│
+▼
+Backend API (Python)
+│
+▼
+TensorFlow Lite Model
+│
+▼
+Prediction Result
+
+
+---
+
+# 🛠️ Technologies Used
+
+## Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+
+## Backend / API
+- Python
+- Flask / FastAPI style API structure
+
+## Machine Learning
+- TensorFlow
+- TensorFlow Lite
+- Computer Vision (Image Classification)
+
+## Deployment / Tools
+- Node.js
+- npm
+- Git
+- GitHub
+- VS Code
+
+---
+
+# 📂 Project Structure
+
+BananaWebsite
+│
+├── api
+│ ├── model
+│ ├── model_export
+│ ├── index.py
+│ ├── model.tflite
+│ └── requirements.txt
+│
+├── frontend
+│ ├── build
+│ ├── public
+│ ├── src
+│ │ ├── App.js
+│ │ ├── home.js
+│ │ ├── index.js
+│ │ └── styles & images
+│ └── package.json
+│
+├── images
+│ └── prototype screenshots
+│
+├── saved_models
+│
+├── README.md
+├── vercel.json
+└── package.json
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Goutham-Gourabathuni/Bonanza-draft1.git
+cd BananaWebsite
+```
+
+2️⃣ Install Frontend Dependencies
+
+```bash
+cd frontend
+npm install
+```
+3️⃣ Install Backend Dependencies
+
+```bash
+cd ../api
+pip install -r requirements.txt
+```
+
+4️⃣ Run the Project
+```bash
+Start the frontend server:
+
+npm run dev
+
+or
+
+npm start
+```
+
+The web application will open in your browser.
+
+---
 
 ## Images of the prototype
 
@@ -77,3 +207,17 @@ Potassium deficiency leaf selection
 Potassium deficiency leaf prediction
 
 ![Potassium deficiency leaf prediction](images/Screenshot%202025-09-15%20171931.png)
+
+---
+
+🔮 Future Scope
+
+Planned improvements for the BONANZA platform:
+
+Improve model accuracy with larger dataset
+Deploy the system as a cloud-based AI service
+Mobile application using React Native
+Provide fertilizer recommendations
+Real-time camera based detection
+Multi-crop deficiency detection
+Farmer friendly UI with multilingual support
